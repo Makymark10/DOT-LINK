@@ -16,7 +16,7 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg  navbar-gray menu shadow fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="./index.html">
       <img src="./img/logo.png" alt="logo image">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./sem1.html">Semester 1</a></li>
-            <li><a class="dropdown-item" href="#">Semester 2</a></li>
+            <li><a class="dropdown-item" href="./sem2.html">Semester 2</a></li>
             <!-- <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -68,6 +68,36 @@
 </nav>
 
 
+<!-- popup ads -->
+<!-- 
+<section>
+  <div class="container">
+    <div class="modal fade" id="customModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-black" id="customModalLabel">Titan Gel</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex">
+                  <p class="text-black text-capitalize mx-auto">Your message has sent to our team</p>
+                  <iframe class="gif p-3" src="https://giphy.com/embed/vGleutNwtVXgmKc207" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rahul-basak-rahul-basak-make-it-big-vGleutNwtVXgmKc207"></a></p>
+                  <a class="navbar-brand" href="#">
+                      <img class="popupimg" src="./img/ads/popup.jpg" alt="logo image">
+                  </a>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
 
 <section id="contact" class="get-started">
   <div class="container">
@@ -94,24 +124,46 @@
           <div class="col-12 col-lg-6 bg-white shadow p-3">
               <div class="form w-100 pb-2">
                   <h4 class="display-3--title mb-5 text-capitalize">message us now</h4>
-                  <form action="#" class="row">
+                  <!-- onsubmit="sendEmail(); reset(); return false" -->
+                  <form class="row" method="post" id="contactForm" onsubmit="sendEmail(); reset(); return false">
                       <div class="col-lg-6 col-md-6 mb-3">
-                          <input type="text" placeholder="First Name" id="inputfirstName" class="form-control shadow font-control-lg">
+                          <input type="text" placeholder="First Name" id="Name" class="form-control shadow font-control-lg" required>
                       </div>
                       <div class="col-lg-6 col-md-6 mb-3">
-                          <input type="text" placeholder="Last Name" id="inputlastName" class="form-control shadow font-control-lg">
+                          <input type="text" placeholder="Last Name" id="lastName" class="form-control shadow font-control-lg" required>
                       </div>
                       <div class="col-lg-12 mb-3">
-                          <input type="email" placeholder="Email address" id="inputEmail" class="form-control shadow font-control-lg">
+                          <input type="email" placeholder="Email address" id="email" class="form-control shadow font-control-lg" required>
                       </div>
                       <div class="col-lg-12 mb-3">
-                         <textarea name="message" placeholder="Message" id="Message" rows="8" class="form-control shadow font-control-lg"></textarea>
+                         <textarea name="message" placeholder="Message" id="message" rows="8" class="form-control shadow font-control-lg"></textarea>
                       </div>
                       <div class="text-center d-grid mt-1">
-                        <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3 text-white">
+                        <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                           Submit
                           <i class="fas fa-paper-plane"></i>
                         </button>
+                        <!-- Modal when clicking the submit button-->
+                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                               <div class="modal-header">
+                                 <h1 class="modal-title fs-5 text-black" id="staticBackdropLabel">Message</h1>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                              <div class="modal-body">
+                                 <p class="text-black text-capitalize mx-auto">Your message has sent to our team</p>
+                                 <a class="navbar-brand" href="#">
+                                  <img src="./img/logo.png" alt="logo image">
+                                </a>
+                              </div>
+                             <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                               <!-- <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Understood</button> -->
+                            </div>
+                            </div>
+                          </div>
+                       </div>
                       </div>
                   </form>
               </div>
@@ -284,7 +336,7 @@
   <i class="fas fa-chevron-up"></i>
 </a>  
 
-    <script src="./assests/glightbox js-css/js/glightbox.min.js"></script>
+    <!-- <script src="./assests/glightbox js-css/js/glightbox.min.js"></script>
     <script type="text/javascript">
       const lightbox = GLightbox({
             'href': './images/videos/rickroll.mp4',
@@ -294,11 +346,48 @@
             'autoPlayVideos': true,
             // 'autoplay': true
           });
+    </script> -->
+    <!-- document.getElementById('email').value -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+   function sendEmail() { 
+
+       Email.send({ 
+       SecureToken: '3b05e8f0-9aa8-4a06-b79f-36fb80c7241a',
+       To: 'makymark061@gmail.com', 
+       From: 'makymark061@gmail.com', 
+       Subject: "DOT LINK Message", 
+       Body: "<br> Name: " + document.getElementById('Name').value  
+       + "<br> LastName: " + document.getElementById('lastName').value  
+       + "<br> Email Account: " + document.getElementById('lastName').value  
+       + "<br> Message: " + document.getElementById('message').value  
+      }) 
+      // .then( message => alert(message));
+      
+        
+        
+    } 
+
+//     document.addEventListener('DOMContentLoaded', function() {
+//   document.getElementById('popup').style.display = 'flex';
+// });
+// document.getElementById('closePopup').addEventListener('click', function() {
+//   document.getElementById('popup').style.display = 'none';
+// });
+
+//popup ads features
+// document.addEventListener('DOMContentLoaded', function() {
+//     var customModal = new bootstrap.Modal(document.getElementById('customModal'));
+//     customModal.show();
+// });
+
     </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1bcdea6025.js" crossorigin="anonymous"></script>
     <script src="./assests/css/js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
       <!-- <script>
+        for home page only
       // const searchicon d-block = document.querySelector('.search-icon d-block');
       // const searchInput = document.querySelector('.search-input');
 
