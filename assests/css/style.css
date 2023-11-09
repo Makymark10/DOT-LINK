@@ -12531,15 +12531,30 @@ textarea.form-control-lg {
   border-radius: 5px;
 }
 
-.btn {
+.btnM {
   width: 27%;
   color: #fff;
 }
 
+.Q-line::before {
+  content: "";
+  width: 9.5rem;
+  height: 0.1rem;
+  display: block;
+  background-color: #ee10b6;
+}
+
 @media (max-width: 550px) {
-  .btn {
+  .btnM {
     width: 45%;
     color: #fff;
+  }
+  .Q-line::before {
+    content: "";
+    width: 8rem;
+    height: 0.1rem;
+    display: block;
+    background-color: #ee10b6;
   }
 }
 
