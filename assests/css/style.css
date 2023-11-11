@@ -12544,6 +12544,10 @@ textarea.form-control-lg {
   background-color: #ee10b6;
 }
 
+.nv {
+  display: none;
+}
+
 @media (max-width: 550px) {
   .btnM {
     width: 45%;
