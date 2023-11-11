@@ -8,6 +8,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>DOT LINK</title>
+
+    <script>
+      // Check if the user has already accepted the terms
+      document.addEventListener('DOMContentLoaded', function() {
+          var accepted = localStorage.getItem('termsAccepted');
+          if (!accepted) {
+              var customModal = new bootstrap.Modal(document.getElementById('customModal'));
+              customModal.show();
+          }
+      });
+  
+      // Function to handle the acceptance of terms
+      function acceptTerms() {
+          // Set a flag in local storage
+          localStorage.setItem('termsAccepted', true);
+  
+          // Close the modal
+          var customModal = new bootstrap.Modal(document.getElementById('customModal'));
+          customModal.hide();
+      }
+  </script>
 </head>
 <body>
     
@@ -30,8 +51,8 @@
             Modules
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./sem1.html">Semester 1</a></li>
-            <li><a class="dropdown-item" href="#">Semester 2</a></li>
+            <li><a class="dropdown-item" href="./1stquater.html">1st Quater</a></li>
+            <li><a class="dropdown-item" href="./2ndquater.html">2nd Quater</a></li>
             <!-- <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -64,6 +85,33 @@
     </div>
   </div>
 </nav>
+
+
+<!-- terms and condition-->
+<section>
+  <div class="container">
+    <div class="modal fade" id="customModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-black" id="customModalLabel">Terms and Conditions</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text"> <input type="checkbox" id="acceptCheckbox" class=""> I have read and agree to abide by the <a class="text-capitalize" href="https://www.termsfeed.com/live/092d821f-6457-4422-a165-9acda6dc88c5">terms and conditions</a> outlined by this e-learning platform, acknowledging my commitment to comply with the specified policies and guidelines.</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal" onclick="acceptTerms()">Accept</button>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <section id="home" class="intro-section">
   <div class="container">
@@ -320,7 +368,7 @@
             <!-- client name & role  -->
             <div class="feedback__name">
               <h3>Andie MacDowell</h3>
-              <p class="fw-light"></p>
+              <p class="fw-light">American actress</p>
             </div>
           </div>     
         </div>
@@ -388,7 +436,7 @@
           </div>
         </div>
         <!-- ACCORDION ITEM no.4 -->
-        <div class="accordion-item shadow mb-3">
+        <div class="accordion-item shadow mb-4">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               What are the social and cultural impacts of migration in the contemporary world?
@@ -659,17 +707,17 @@
         <hr class="bg-white display-inline-block mb-4" style="width: 100px; height: 2px;">
         <ul class="list-line company-list">
           <li><a href="#">
-            makymark061@gmail.com
+            GoogleAccount
+          </a></li>
+          <!-- <li><a href="#">
+            GoogleAccount
           </a></li>
           <li><a href="#">
-            makymark061@gmail.com
+            GoogleAccount
           </a></li>
           <li><a href="#">
-            makymark061@gmail.com
-          </a></li>
-          <li><a href="#">
-            makymark061@gmail.com
-          </a></li>
+            GoogleAccount
+          </a></li> -->
         </ul>
       </div>
     </div>
