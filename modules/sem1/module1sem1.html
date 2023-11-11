@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="../../assests/css/style.css">
     <link rel="stylesheet" href="../../assests/glightbox js-css/css/glightbox.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-autoplay.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-comments.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-fullscreen.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-rotate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-share.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>DOT LINK</title>
 </head>
@@ -75,7 +82,26 @@
       <p class="lead">Module 1 TitleName</p>
     </div>
 
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div id="gallery" class="carousel-inner ">
+      <a href="../../img/sem1/mod1/modpg1.png" data-lg-size="1000-600"
+          data-lg-thumbnail="../../img/sem1/mod1/modpg1.png">
+          <img src="../../img/sem1/mod1/modpg1.png" style="width: 100%;">
+      </a>
+      <a href="../../img/sem1/mod1/modpg2.png" data-lg-size="1000-600"
+          data-lg-thumbnail="../../img/sem1/mod1/modpg2.png">
+          <img src="../../img/sem1/mod1/modpg2.png" class="nv">
+      </a>
+      <a href="../../img/sem1/mod1/modpg3.png" data-lg-size="1000-600"
+          data-lg-thumbnail="../../img/sem1/mod1/modpg3.png">
+          <img src="../../img/sem1/mod1/modpg3.png" class="nv">
+      </a>
+      <a href="../../img/sem1/mod1/quiz.png" data-lg-size="1000-600"
+          data-lg-thumbnail="../../img/sem1/mod1/quiz.png">
+          <img src="../../img/sem1/mod1/quiz.png" class="nv">
+       </a>
+  </div>
+  
+    <!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
           <img src="../../img/sem1/mod1/modpg1.png" class="d-block w-100" alt="...">
@@ -100,7 +126,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
+    </div> -->
 
     
   </div>
@@ -352,6 +378,25 @@
       target: '#navbar-example'
       })
     </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+     <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/autoplay/lg-autoplay.min.js"></script>
+     <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/fullscreen/lg-fullscreen.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/rotate/lg-rotate.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/share/lg-share.min.js"></script>
+     <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+     <script>
+         lightGallery(document.getElementById('gallery'), {
+             plugins: [lgThumbnail, lgZoom, lgFullscreen, lgShare, lgRotate, lgAutoplay],
+             download: true,
+             controls: true,
+             thumbWidth: 100,
+             thumbHeight: 100
+         });
+     </script>
     <script src="./assests/css/js/app.js"></script>
     <script src="https://kit.fontawesome.com/1bcdea6025.js" crossorigin="anonymous"></script>
     <script src="./assests/css/js/search.js"></script>
